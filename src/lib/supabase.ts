@@ -1,0 +1,8 @@
+import { createClient } from '@supabase/supabase-js';
+
+// Access variables directly from Vite's import.meta.env
+// The user will need to add these to their .env.local file
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder-url.supabase.co';
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key';
+
+export const supabase = createClient(supabaseUrl, supabaseKey);
